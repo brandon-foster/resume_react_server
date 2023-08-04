@@ -8,9 +8,8 @@ export const Layout = () => {
                     <div>
                         <h3 className="float-md-start mb-0">home</h3>
                         <nav className="nav nav-masthead justify-content-center float-md-end">
-                            <Link to='/' className='nav-link fw-bold py-1 px-0'>Home</Link>
+                            <Link to='/' className='nav-link fw-bold py-1 px-0'>Portfolio</Link>
                             <Link to='/resume' className='nav-link fw-bold py-1 px-0'>Resume</Link>
-                            <Link to='/portfolio' className='nav-link fw-bold py-1 px-0'>Portfolio</Link>
                             <Link to='/opinions' className='nav-link fw-bold py-1 px-0'>Opinions</Link>
                         </nav>
                     </div>
