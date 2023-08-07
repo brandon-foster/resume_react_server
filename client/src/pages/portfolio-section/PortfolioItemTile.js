@@ -1,13 +1,35 @@
-export const PortfolioItemTile = ({ tileProps}) => {
-  const { url, imgSrc, h4, line1, line2, repoUrl, uiUrl, serviceUrl, coreUrl } = tileProps;
+export const PortfolioItemTile = ({ tileProps, isActive, tagStateMachine }) => {
+  const { url, imgSrc, h4, line1, line2, repoUrl, uiUrl, serviceUrl, coreUrl, tags } = tileProps;
+  function provideActiveTags() {
+    const arr = [];
+    for (let [key, value] of Object.entries(tagStateMachine)) {
+      if (value.active === true) {
+        arr.push(value);
+      }
+    }
+    return arr;
+  }
+  function containsAnActiveTag() {
+    const activeTags = provideActiveTags();
+    let containsAnActiveTag = false;
+    for (const activeTag of activeTags) {
+      for (const tag of tags) {
+        if (tag.name === activeTag.name) {
+          containsAnActiveTag = true;
+        }
+      }
+    }
+    return containsAnActiveTag;
+  }
   return (
-    <div className="col">
+    <div className={`col ${!containsAnActiveTag() && 'd-none'}`}>
       <div className="card shadow-sm bg-secondary text-white">
         <a href={url} target="_blank">
           <img src={imgSrc} className="bd-placeholder-img card-img-top" width="225" height="225" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"/>
         </a>
         <div className="card-body">
           <h4 className="card-text">{h4}</h4>
+          <h5 className="card-text">{tags.map((t, i) => <span className='mx-1' key={`tag${i}`}>{t.name}</span>)}</h5>
           <div className="d-flex flex-column justify-content-between align-items-center">
             <small className="text-light">{line1}</small>
             <small className="text-light">{line2}</small>

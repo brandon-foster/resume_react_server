@@ -2,71 +2,21 @@ import { useState } from 'react';
 
 import { PortfolioItemTile } from './portfolio-section/PortfolioItemTile';
 import { orangeTileData, pinkTileData, greenTileData, notesTileData, puzzleSolverTileData, hangmanTileData } from './portfolio-section/tileData';
+import { tags } from './portfolio-section/tags';
+import { TagButton } from './portfolio-section/TagButton';
 
 export const HomePage = () => {
-    const bookTag = {
-        FRUIT: 'FRUIT',
-        EXPENSIVE: 'EXPENSIVE',
-        FAVORITE: 'FAVORITE',
-    };
-    const tagStrings = [
-        bookTag.FRUIT, bookTag.EXPENSIVE, bookTag.FAVORITE,
-    ];
-    const books = [
-        {
-            title: 'Apple Book',
-            tagList: [
-                bookTag.FRUIT,
-            ],
-        },
-        {
-            title: 'Banana Book',
-            tagList: [
-                bookTag.FRUIT,
-                bookTag.EXPENSIVE,
-                bookTag.FAVORITE,
-            ],
-        },
-        {
-            title: 'Cherry Book',
-            tagList: [
-                bookTag.FRUIT,
-                bookTag.EXPENSIVE,
-            ],
-        },
-    ];
-    const [bookListState, setBookListState] = useState([]);
-    function handleTagButtonClick(e, bookTag) {
-        const newList = books.filter(b => b.tagList.includes(bookTag));
-        setBookListState([...newList]);
-    }
-    const tags = {
-      java: 'java',
-      javascript: 'javascript',
-      python: 'python',
-      utility: 'utility',
-      node: 'node',
-      react: 'react',
-    };
+    const [tagStateMachine, setTagStateMachine] = useState(tags);
+    const [firstClickHasOccurred, setFirstClickHasOccurred] = useState(false);
     return (
         <>
             <h1>Brandon Foster</h1>
             <p className="lead">software developer 5+ years</p>
             <p className="lead">
-              {Object.keys(tags).map((t, i) => 
-                <a key={`tag${i}`} href="#" className="btn btn-lg btn-secondary fw-bold border-white bg-white">{t}</a>
+              {Object.keys(tagStateMachine).map((t, i) => 
+                <TagButton key={`tag${i}`} tagName={t} tagStateMachine={tagStateMachine} setTagStateMachine={setTagStateMachine} firstClickHasOccurred={firstClickHasOccurred} setFirstClickHasOccurred={setFirstClickHasOccurred} />
               )}
             </p>
-            {tagStrings.map((t, i) => {
-                return (
-                    <button key={`tagButton${i}`} type='button' className='btn btn-secondary' onClick={e => handleTagButtonClick(e, t)}>{t}</button>
-                );
-            })}
-            {bookListState.map((b, i) => {
-                return (
-                    <p key={`book${i}`}>{ b.title }</p>
-                );
-            })}
           <section className="mt-5 text-center container" id="portfolio-destination">
             <div className="row py-lg-5">
               <div className="col-lg-6 col-md-8 mx-auto">
@@ -82,15 +32,14 @@ export const HomePage = () => {
               </div>
             </div>
           </section>
-
           <div className="container-fluid mb-5">
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <PortfolioItemTile tileProps={orangeTileData} />
-              <PortfolioItemTile tileProps={pinkTileData} />
-              <PortfolioItemTile tileProps={greenTileData} />
-              <PortfolioItemTile tileProps={notesTileData} />
-              <PortfolioItemTile tileProps={puzzleSolverTileData} />
-              <PortfolioItemTile tileProps={hangmanTileData} />
+              <PortfolioItemTile tileProps={orangeTileData} tagStateMachine={tagStateMachine} />
+              <PortfolioItemTile tileProps={pinkTileData} tagStateMachine={tagStateMachine}  />
+              <PortfolioItemTile tileProps={greenTileData} tagStateMachine={tagStateMachine}  />
+              <PortfolioItemTile tileProps={notesTileData} tagStateMachine={tagStateMachine}  />
+              <PortfolioItemTile tileProps={puzzleSolverTileData} tagStateMachine={tagStateMachine}  />
+              <PortfolioItemTile tileProps={hangmanTileData} tagStateMachine={tagStateMachine}  />
             </div>
           </div>
         </>
