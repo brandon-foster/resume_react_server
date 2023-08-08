@@ -14,7 +14,7 @@ export const HomePage = () => {
             <p className="lead">software developer 5+ years</p>
             <p className="lead">
               {Object.keys(tagStateMachine).map((t, i) => 
-                <TagButton key={`tag${i}`} tagName={t} tagStateMachine={tagStateMachine} setTagStateMachine={setTagStateMachine} firstClickHasOccurred={firstClickHasOccurred} setFirstClickHasOccurred={setFirstClickHasOccurred} />
+                <TagButton key={`tag${i}`} tagName={t} tagStateMachine={tagStateMachine} setTagStateMachine={setTagStateMachine} />
               )}
             </p>
           <section className="mt-5 text-center container" id="portfolio-destination">

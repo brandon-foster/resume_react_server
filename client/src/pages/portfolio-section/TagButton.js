@@ -1,6 +1,6 @@
 import { tags } from './tags';
 
-export const TagButton = ({ tagName, tagStateMachine, setTagStateMachine, firstClickHasOccurred, setFirstClickHasOccurred }) => {
+export const TagButton = ({ tagName, tagStateMachine, setTagStateMachine }) => {
     function provideTagName(tagKey) {
         return tags[tagKey].name;
     }
@@ -42,7 +42,7 @@ export const TagButton = ({ tagName, tagStateMachine, setTagStateMachine, firstC
             },
         }));
     }
-    function isOneActiveRemaining() {
+    function clickedLastActiveTagRemaining() {
         return provideActiveCount() === 1 && tagStateMachine[tagName].active === true;
     }
     return (
@@ -50,18 +50,11 @@ export const TagButton = ({ tagName, tagStateMachine, setTagStateMachine, firstC
             href="#"
             className={`btn btn-lg btn-secondary fw-bold ${tagStateMachine[tagName].active && 'border-white bg-white'}`}
             onClick={() => {
-                if (!firstClickHasOccurred) {
-                    deactiveAllExcept(tagName);
-                    setFirstClickHasOccurred(true);
+                if (clickedLastActiveTagRemaining()) {
+                    activateAll();
                 }
                 else {
-                    if (isOneActiveRemaining()) {
-                        activateAll();
-                        setFirstClickHasOccurred(false);
-                    }
-                    else {
-                        activateOne(tagName);
-                    }
+                    deactiveAllExcept(tagName);
                 }
             }}
         >
