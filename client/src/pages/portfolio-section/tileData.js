@@ -63,7 +63,7 @@ const notesTileData = createTileData({
   doDisplay: true,
 });
 const puzzleSolverTileData = createTileData({
-  url: '/puzzlesolver-frontend/',
+  url: '/puzzlesolver/',
   imgSrc: puzzlesolverSquare,
   h4: 'Puzzle Solver',
   line1: 'Java 15-puzzle solver.',
