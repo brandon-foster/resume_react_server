@@ -21,7 +21,7 @@ function createTileData({ url, imgSrc, h4, line1, line2, repoUrl, uiUrl, service
   };
 }
 const orangeTileData = createTileData({
-  url: 'http://notes.localhost:4480/notes',
+  url: 'http://localhost:4480/notes',
   imgSrc: orange,
   h4: 'Orange',
   line1: 'A place for notes.',
@@ -53,7 +53,7 @@ const greenTileData = createTileData({
   doDisplay: true,
 });
 const notesTileData = createTileData({
-  url: 'http://notes.localhost:4480/notes',
+  url: 'http://localhost:4480/notes',
   imgSrc: notesSquare,
   h4: 'Notes',
   line1: 'A place for notes.',
