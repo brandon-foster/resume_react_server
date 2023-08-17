@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { PortfolioItemTile } from './portfolio-section/PortfolioItemTile';
-import { orangeTileData, pinkTileData, greenTileData, notesTileData, puzzleSolverTileData, hangmanTileData } from './portfolio-section/tileData';
+import { notesTileData, puzzleSolverTileData } from './portfolio-section/tileData';
 import { tags } from './portfolio-section/tags';
 import { TagButton } from './portfolio-section/TagButton';
 
@@ -34,12 +34,8 @@ export const HomePage = () => {
           </section>
           <div className="container-fluid mb-5">
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <PortfolioItemTile tileProps={orangeTileData} tagStateMachine={tagStateMachine} />
-              <PortfolioItemTile tileProps={pinkTileData} tagStateMachine={tagStateMachine}  />
-              <PortfolioItemTile tileProps={greenTileData} tagStateMachine={tagStateMachine}  />
               <PortfolioItemTile tileProps={notesTileData} tagStateMachine={tagStateMachine}  />
               <PortfolioItemTile tileProps={puzzleSolverTileData} tagStateMachine={tagStateMachine}  />
-              <PortfolioItemTile tileProps={hangmanTileData} tagStateMachine={tagStateMachine}  />
             </div>
           </div>
         </>
