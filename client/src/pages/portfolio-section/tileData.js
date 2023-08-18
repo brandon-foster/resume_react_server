@@ -19,7 +19,7 @@ function createTileData({ url, imgSrc, h4, line1, line2, repoUrl, uiUrl, service
   };
 }
 const notesTileData = createTileData({
-  url: 'http://localhost:4480/notes',
+  url: '/notes/',
   imgSrc: notesSquare,
   h4: 'Notes',
   line1: 'A place for notes.',
