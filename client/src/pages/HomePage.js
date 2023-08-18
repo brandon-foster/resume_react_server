@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { PortfolioItemTile } from './portfolio-section/PortfolioItemTile';
-import { notesTileData, puzzleSolverTileData } from './portfolio-section/tileData';
+import { notesTileData, puzzleSolverTileData, keyboardTileData } from './portfolio-section/tileData';
 import { tags } from './portfolio-section/tags';
 import { TagButton } from './portfolio-section/TagButton';
 
@@ -36,6 +36,7 @@ export const HomePage = () => {
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
               <PortfolioItemTile tileProps={notesTileData} tagStateMachine={tagStateMachine}  />
               <PortfolioItemTile tileProps={puzzleSolverTileData} tagStateMachine={tagStateMachine}  />
+              <PortfolioItemTile tileProps={keyboardTileData} tagStateMachine={tagStateMachine}  />
             </div>
           </div>
         </>

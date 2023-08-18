@@ -1,5 +1,6 @@
 import notesSquare from '../../img/notes-square.png';
 import puzzlesolverSquare from '../../img/puzzle-solver-square.png';
+import keyboardSquare from '../../img/keyboard-square.png';
 import { tags } from './tags';
 
 function createTileData({ url, imgSrc, h4, line1, line2, repoUrl, uiUrl, serviceUrl, coreUrl, tags, doDisplay }) {
@@ -39,5 +40,17 @@ const puzzleSolverTileData = createTileData({
   tags: [tags.java, tags.springBoot, tags.javascript],
   doDisplay: true,
 });
+const keyboardTileData = createTileData({
+  url: '/keyboard/',
+  imgSrc: keyboardSquare,
+  h4: 'Keyboard',
+  line1: 'A place to practice typing.',
+  line2: 'Track your typing.',
+  uiUrl: 'https://joyldp.com/gogs/brandon/puzzlesolver-frontend',
+  serviceUrl: 'https://joyldp.com/gogs/brandon/puzzlesolver-api-spring-boot',
+  coreUrl: 'https://joyldp.com/gogs/brandon/puzzlesolver-lib/src/master/README.md',
+  tags: [tags.java, tags.springBoot, tags.javascript],
+  doDisplay: true,
+});
 
-export { notesTileData, puzzleSolverTileData };
+export { notesTileData, puzzleSolverTileData, keyboardTileData };
