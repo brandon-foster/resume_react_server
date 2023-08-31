@@ -25,7 +25,7 @@ const notesTileData = createTileData({
   line1: 'A place for notes.',
   line2: 'Pure PHP, plus a Markdown library. MySQL. Dockerized.',
   repoUrl: 'https://joyldp.com/gogs/brandon/notes',
-  tags: [tags.node, tags.react, tags.javascript],
+  tags: [tags.node, tags.react],
   doDisplay: true,
 });
 const puzzleSolverTileData = createTileData({
@@ -37,7 +37,7 @@ const puzzleSolverTileData = createTileData({
   uiUrl: 'https://joyldp.com/gogs/brandon/puzzlesolver-frontend',
   serviceUrl: 'https://joyldp.com/gogs/brandon/puzzlesolver-api-spring-boot',
   coreUrl: 'https://joyldp.com/gogs/brandon/puzzlesolver-lib/src/master/README.md',
-  tags: [tags.java, tags.springBoot, tags.javascript],
+  tags: [tags.java],
   doDisplay: true,
 });
 const keyboardTileData = createTileData({
@@ -49,7 +49,7 @@ const keyboardTileData = createTileData({
   uiUrl: 'https://joyldp.com/gogs/brandon/puzzlesolver-frontend',
   serviceUrl: 'https://joyldp.com/gogs/brandon/puzzlesolver-api-spring-boot',
   coreUrl: 'https://joyldp.com/gogs/brandon/puzzlesolver-lib/src/master/README.md',
-  tags: [tags.java, tags.springBoot, tags.javascript],
+  tags: [tags.java, tags.react],
   doDisplay: true,
 });
 
