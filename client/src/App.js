@@ -7,9 +7,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' exact element={<Layout/>}>
-          <Route index exact element={<HomePage/>}></Route>
-          <Route path='/resume' exact element={<ResumePage/>}></Route>
+        <Route path='/' exact element={<Layout />}>
+          <Route index exact element={<HomePage />}></Route>
+          <Route path='/resume' exact element={<ResumePage />}></Route>
         </Route>
       </Routes>
     </Router>
