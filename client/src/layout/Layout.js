@@ -10,7 +10,7 @@ export const Layout = () => {
             <nav className="nav nav-masthead justify-content-center float-md-end">
               <Link to='/' className='nav-link fw-bold py-1 px-0'>Portfolio</Link>
               <Link to='/resume' className='nav-link fw-bold py-1 px-0'>Resume</Link>
-              <Link to='/opinions' className='nav-link fw-bold py-1 px-0'>Opinions</Link>
+              <Link to='/philosophy' className='nav-link fw-bold py-1 px-0'>Philosophy</Link>
             </nav>
           </div>
         </header>
