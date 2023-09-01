@@ -1,4 +1,4 @@
-import { TagButton } from './portfolio-section/TagButton';
+import { TagButton } from './TagButton';
 
 export const ProjectTagList = ({ tagStateMachine, setTagStateMachine }) => {
   return (

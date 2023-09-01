@@ -1,4 +1,4 @@
-import { tags } from '../../pages/portfolio-section/tags';
+import { tags } from '../pages/portfolio-section/tags';
 
 export const TagButton = ({ tagName, tagStateMachine, setTagStateMachine }) => {
   function provideTagName(tagKey) {
