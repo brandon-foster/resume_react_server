@@ -10,10 +10,15 @@ export const PhilosophyPage = () => {
     `I know I successfuly refactored code when it has fewer lines than before. - R.G., 2022`,
     `Why are we adding jars files to version control? - K.K., 2023`,
   ];
-  const availableIndexesList = provideAvailableIndexesOf(quoteList);
+  const availIndexesList = provideAvailableIndexesOf(quoteList);
+  const [availIndexes, setAvailIndexes] = useState([...availIndexesList]);
+  const [quote, setQuote] = useState(() => {
+    return provideQuote(provideRandomAndRemoveFrom(availIndexes));
+  });
   function provideQuote(quoteListIndex) {
-    const q = quoteList[quoteListIndex];
-    return q;
+    console.info(`chose ${quoteListIndex}`);
+    console.info(availIndexes);
+    return quoteList[quoteListIndex];
   }
   function provideAvailableIndexesOf(sourceArr) {
     let arr = [];
@@ -25,14 +30,11 @@ export const PhilosophyPage = () => {
   function provideRandomAndRemoveFrom(arr) {
     const rand = Math.floor(Math.random() * arr.length);
     const quoteListIndex = arr.splice(rand, 1);
-    if (availableIndexesList.length === 0) {
-      availableIndexesList = provideAvailableIndexesOf(quoteList);
+    if (availIndexes.length === 0) {
+      setAvailIndexes([...provideAvailableIndexesOf(quoteList)])
     }
     return quoteListIndex;
   }
-  const [quote, setQuote] = useState(() => {
-    return provideQuote(provideRandomAndRemoveFrom(availableIndexesList));
-  });
   return (
     <>
       <h1 className='display-5 fw-bold text-body-emphasis'>Philosphy</h1>
@@ -41,7 +43,7 @@ export const PhilosophyPage = () => {
           <p className='lead mb-4'>{quote}</p>
           <div className='d-grid gap-2 d-sm-flex justify-content-sm-center'>
             <button type='button' className='btn btn-primary btn-lg px-4 gap-3'
-              onClick={() => setQuote(provideQuote(provideRandomAndRemoveFrom(availableIndexesList)))}>New Quotation</button>
+              onClick={() => setQuote(provideQuote(provideRandomAndRemoveFrom(availIndexes)))}>New Quotation</button>
             {/* <button type='button' className='btn btn-outline-secondary btn-lg px-4'>Secondary</button> */}
           </div>
         </div>
