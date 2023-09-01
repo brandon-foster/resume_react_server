@@ -3,20 +3,16 @@ import { useState } from 'react';
 import { PortfolioItemTile } from './portfolio-section/PortfolioItemTile';
 import { notesTileData, puzzleSolverTileData, keyboardTileData } from './portfolio-section/tileData';
 import { tags } from './portfolio-section/tags';
-import { TagButton } from './portfolio-section/TagButton';
+
+import { ProjectTagList } from '../comp/ProjectTagList';
 
 export const HomePage = () => {
   const [tagStateMachine, setTagStateMachine] = useState(tags);
-  const [firstClickHasOccurred, setFirstClickHasOccurred] = useState(false);
   return (
     <>
       <h1>Brandon Foster</h1>
       <p className="lead">software developer 5+ years</p>
-      <p className="lead">
-        {Object.keys(tagStateMachine).map((t, i) =>
-          <TagButton key={`tag${i}`} tagName={t} tagStateMachine={tagStateMachine} setTagStateMachine={setTagStateMachine} />
-        )}
-      </p>
+      <ProjectTagList tagStateMachine={tagStateMachine} setTagStateMachine={setTagStateMachine}></ProjectTagList>
       <section className="mt-5 text-center container" id="portfolio-destination">
         <div className="row py-lg-5">
           <div className="col-lg-6 col-md-8 mx-auto">
