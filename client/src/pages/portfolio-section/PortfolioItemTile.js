@@ -29,7 +29,9 @@ export const PortfolioItemTile = ({ tileProps, isActive, tagStateMachine }) => {
         </a>
         <div className="card-body">
           <h4 className="card-text">{h4}</h4>
-          <h5 className="card-text">{tags.map((t, i) => <span className='mx-1' key={`tag${i}`}>{t.name}</span>)}</h5>
+          <h5 className="card-text">{tags.map((t, i) => {
+            return <span className='mx-1' key={`tag${i}`}>{t.name + (i === tags.length - 1 ? '' : ',')}</span>
+          })}</h5>
           <div className="d-flex flex-column justify-content-between align-items-center">
             <small className="text-light">{line1}</small>
             <small className="text-light">{line2}</small>
