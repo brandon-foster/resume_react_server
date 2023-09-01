@@ -2,13 +2,13 @@ import { useState } from 'react';
 
 export const PhilosophyPage = () => {
   const quoteList = [
-    `Hope is not an engineering best practice. - Team Lead, circa 2017`,
-    `You just need to test the boundary of the existing application. Then you can refactor. - L.H., circa 2022`,
-    `Before your fingers touch the keyboard, know what you want to do. - CS professor during a college visit, 2011`,
-    `Nothing is difficult. It depends on how much time you have. - F.L., 2011`,
-    `I see what's going on. They did entirely too much pre-factoring. - P.G., 2021`,
-    `I know I successfuly refactored code when it has fewer lines than before. - R.G., 2022`,
-    `Why are we adding jars files to version control? - K.K., 2023`,
+    `Hope is not an engineering best practice. - Team Lead, circa 2017, paraphrased`,
+    `You only need to test the boundary. Then you can refactor the lower layers. - L.H., circa 2022, paraphrased`,
+    `Before your fingers touch the keyboard, know what you want to do. - C.S. professor during a college visit, circa 2011, paraphrased`,
+    `Nothing is difficult. It depends on how much time you have. - F.L., circa 2011, paraphrased`,
+    `I see what's going on. They did entirely too much pre-factoring. - P.G., circa 2021, paraphrased`,
+    `I know I did a good job refactoring when I end up fewer lines than I did before. - R.G., circa 2022, paraphrased`,
+    `Nobody has yet to answer me. Why are we adding jars to git? - K.K., circa 2023, paraphrased`,
   ];
   const availIndexesList = provideAvailableIndexesOf(quoteList);
   const [availIndexes, setAvailIndexes] = useState([...availIndexesList]);
