@@ -24,7 +24,7 @@ const notesTileData = createTileData({
   h4: 'Notes',
   line1: 'A place for notes.',
   line2: 'Pure PHP, plus a Markdown library. MySQL. Dockerized.',
-  repoUrl: 'https://joyldp.com/gogs/brandon/notes',
+  repoUrl: 'https://bitbucket.org/brandon-foster/note_app/src/master/',
   tags: [tags.node, tags.react],
   doDisplay: true,
 });
@@ -34,9 +34,9 @@ const puzzleSolverTileData = createTileData({
   h4: 'Puzzle Solver',
   line1: 'Java 15-puzzle solver.',
   line2: 'Pure JavaScript ES6, HTML, and CSS front end.',
-  uiUrl: 'https://joyldp.com/gogs/brandon/puzzlesolver-frontend',
-  serviceUrl: 'https://joyldp.com/gogs/brandon/puzzlesolver-api-spring-boot',
-  coreUrl: 'https://joyldp.com/gogs/brandon/puzzlesolver-lib/src/master/README.md',
+  uiUrl: 'https://bitbucket.org/brandon-foster/puzzlesolver-frontend/src/main/',
+  serviceUrl: 'https://bitbucket.org/brandon-foster/puzzlesolver-api-spring-boot/src/master/',
+  coreUrl: 'https://bitbucket.org/brandon-foster/puzzlesolver/src/master/',
   tags: [tags.java],
   doDisplay: true,
 });
@@ -46,9 +46,7 @@ const keyboardTileData = createTileData({
   h4: 'Keyboard',
   line1: 'A place to practice typing.',
   line2: 'Track your typing.',
-  uiUrl: 'https://joyldp.com/gogs/brandon/puzzlesolver-frontend',
-  serviceUrl: 'https://joyldp.com/gogs/brandon/puzzlesolver-api-spring-boot',
-  coreUrl: 'https://joyldp.com/gogs/brandon/puzzlesolver-lib/src/master/README.md',
+  uiUrl: 'https://bitbucket.org/brandon-foster/keyboard_ui/src/master/',
   tags: [tags.java, tags.react],
   doDisplay: true,
 });
