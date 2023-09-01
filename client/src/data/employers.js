@@ -51,7 +51,7 @@ const employers = {
             {
                 title: 'Software Engineer I',
                 projects: [
-                    createProject('Placeholder', null, [
+                    createProject('', null, [
                         'Wrote software enhancements and provided defect resolutions for mulitple applications.',
                         'Participated in planning implementation details of features and bugfixes.',
                         'Performed builds and deployments using tools including Maven, Gradle, Nexus, and Jenkins.',
