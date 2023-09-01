@@ -1,6 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 
 import { IconTerminal } from '../icon-html/IconTerminal';
+import { IconHeart } from '../icon-html/IconHeart';
 
 export const Layout = () => {
   return (
@@ -24,7 +25,7 @@ export const Layout = () => {
           <Outlet />
         </main>
         <footer className="mt-auto text-white-50">
-          <p>Thanks to <a href="https://twitter.com/mdo" className="text-white">@mdo</a> for the nice <a href="https://getbootstrap.com/" className="text-white">Bootstrap</a> template.</p>
+          <p>Made with <IconHeart></IconHeart>.</p>
         </footer>
       </div>
     </div>
