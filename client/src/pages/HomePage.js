@@ -1,13 +1,8 @@
-import { useState } from 'react';
-
-import { tags } from './portfolio-section/tags';
-
 import { ProjectTagList } from '../comp/ProjectTagList';
 import { AllReposButton } from '../comp/AllReposButton';
 import { PortfolioItems } from '../comp/PortfolioItems';
 
-export const HomePage = () => {
-  const [tagStateMachine, setTagStateMachine] = useState(tags);
+export const HomePage = ({ tagStateMachine, setTagStateMachine }) => {
   return (
     <>
       <section className='mt-5 mb-4'>
