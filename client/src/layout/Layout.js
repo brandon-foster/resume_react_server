@@ -4,7 +4,6 @@ import { IconTerminal } from '../icon-html/IconTerminal';
 import { layoutStrings } from '../data/strings';
 
 export const Layout = () => {
-  const sparkle = '&#10024;';
   return (
     <div className="shadow-container h-100 w-100">
       <div className="d-flex w-100 h-100 p-3 mx-auto flex-column">
