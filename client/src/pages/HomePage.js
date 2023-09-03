@@ -5,20 +5,16 @@ import { PortfolioItems } from '../comp/PortfolioItems';
 export const HomePage = ({ tagStateMachine, setTagStateMachine }) => {
   return (
     <>
-      <section className='mt-5 mb-4'>
+      <section className='my-3'>
         <h1>Brandon Foster</h1>
-      </section>
-      <section>
-        <p className="lead">software developer 5+ years</p>
+        <p className='lead'>software developer 5+ years</p>
       </section >
-      <section className="text-center container" id="portfolio-destination">
+      <section className='text-center container' id='portfolio-destination'>
         <AllReposButton></AllReposButton>
-      </section>
-      <section className='mb-4'>
         <ProjectTagList tagStateMachine={tagStateMachine} setTagStateMachine={setTagStateMachine}></ProjectTagList>
       </section>
-      <div className="container-fluid mb-5">
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div className='container-fluid my-4'>
+        <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3'>
           <PortfolioItems tagStateMachine={tagStateMachine}></PortfolioItems>
         </div>
       </div>

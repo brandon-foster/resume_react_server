@@ -1,3 +1,7 @@
+export const homeStrings = {
+  reposButton: 'Repos',
+};
+
 export const philosophyStrings = {
   h1: 'Philosophy',
   hopeIsNot: `Hope is not an engineering best practice. - K.L., circa 2017, paraphrased`,
@@ -9,5 +13,5 @@ export const philosophyStrings = {
 };
 
 export const layoutStrings = {
-  footer: 'Made with &#10024;',
+  footer: 'Made with &#10024; on Mac, Linux, and Windows',
 };
