@@ -1,9 +1,10 @@
 import { Outlet, Link } from "react-router-dom";
 
 import { IconTerminal } from '../icon-html/IconTerminal';
-import { IconHeart } from '../icon-html/IconHeart';
+import { layoutStrings } from '../data/strings';
 
 export const Layout = () => {
+  const sparkle = '&#10024;';
   return (
     <div className="shadow-container h-100 w-100">
       <div className="d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -24,8 +25,8 @@ export const Layout = () => {
         <main className="px-3">
           <Outlet />
         </main>
-        <footer className="mt-auto text-white-50">
-          <p>Made with <IconHeart></IconHeart>.</p>
+        <footer className="pb-3 text-white-50">
+          <p dangerouslySetInnerHTML={{ __html: layoutStrings.footer }}></p>
         </footer>
       </div>
     </div>
