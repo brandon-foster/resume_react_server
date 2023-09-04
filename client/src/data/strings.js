@@ -13,6 +13,6 @@ export const philosophyStrings = {
 };
 
 export const layoutStrings = {
-  footer0: 'Running on Docker Compose and Traefik',
-  footer1: 'Made with &#10024;',
+  footer: `Made with &#10024;
+    <br />&copy; 2023 No rights reserved. <a href='https://bitbucket.org/brandon-foster/resume_react_server/src/master/' target='_blank' rel='noreferrer'>Here's the source.</a>`.trim(),
 };
