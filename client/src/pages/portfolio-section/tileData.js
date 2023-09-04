@@ -45,7 +45,7 @@ const keyboardTileData = createTileData({
   url: '/keyboard/',
   imgSrc: keyboardSquare,
   h4: 'Keyboard',
-  line1: 'A place to practice typing.',
+  line1: 'A place to type.',
   line2: 'Stay and relax.',
   uiUrl: 'https://bitbucket.org/brandon-foster/keyboard_ui/src/master/',
   tags: [tags.java, tags.react],

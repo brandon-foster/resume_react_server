@@ -13,5 +13,6 @@ export const philosophyStrings = {
 };
 
 export const layoutStrings = {
-  footer: 'Made with &#10024; on Mac, Linux, and Windows',
+  footer0: 'Running on Docker Compose and Traefik',
+  footer1: 'Made with &#10024;',
 };

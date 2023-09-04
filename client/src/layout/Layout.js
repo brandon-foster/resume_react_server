@@ -25,7 +25,8 @@ export const Layout = () => {
           <Outlet />
         </main>
         <footer className="pb-3 text-white-50">
-          <p dangerouslySetInnerHTML={{ __html: layoutStrings.footer }}></p>
+          <p dangerouslySetInnerHTML={{ __html: layoutStrings.footer0 }}></p>
+          <p dangerouslySetInnerHTML={{ __html: layoutStrings.footer1 }}></p>
         </footer>
       </div>
     </div>
