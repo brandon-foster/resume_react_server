@@ -31,7 +31,7 @@ export const PhilosophyPage = () => {
   }
   return (
     <>
-      <h1 className='display-2'>{philosophyStrings.h1}</h1>
+      <h1 className='display-2 mt-5'>{philosophyStrings.h1}</h1>
       <div className='px-4 my-5 text-center'>
         <div className='col-sm-6 mx-auto'>
 

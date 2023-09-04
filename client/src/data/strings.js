@@ -21,7 +21,7 @@ export const philosophyStrings = {
 
 export const layoutStrings = {
   footer: `
-    Made with &#10024;
     &copy; ${new Date().getFullYear()}
+    Made with &#10024;
     `.trim(),
 };
