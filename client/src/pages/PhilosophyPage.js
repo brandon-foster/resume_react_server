@@ -1,11 +1,10 @@
 import { useState } from 'react';
 
-import { quoteList } from './philosophy/quoteList';
 import { philosophyStrings } from '../data/strings';
 import { IconRepeat } from '../icon-html/IconRepeat';
 
 export const PhilosophyPage = () => {
-  const availIndexesList = provideAvailableIndexesOf(quoteList);
+  const availIndexesList = provideAvailableIndexesOf(philosophyStrings.quoteList);
   const [availIndexes, setAvailIndexes] = useState([...availIndexesList]);
   const [quote, setQuote] = useState(() => {
     return provideQuote(provideRandomAndRemoveFrom(availIndexes));
@@ -13,7 +12,7 @@ export const PhilosophyPage = () => {
   function provideQuote(quoteListIndex) {
     console.info(`chose ${quoteListIndex}`);
     console.info(availIndexes);
-    return quoteList[quoteListIndex];
+    return philosophyStrings.quoteList[quoteListIndex];
   }
   function provideAvailableIndexesOf(sourceArr) {
     let arr = [];
@@ -26,16 +25,25 @@ export const PhilosophyPage = () => {
     const rand = Math.floor(Math.random() * arr.length);
     const quoteListIndex = arr.splice(rand, 1);
     if (availIndexes.length === 0) {
-      setAvailIndexes([...provideAvailableIndexesOf(quoteList)])
+      setAvailIndexes([...provideAvailableIndexesOf(philosophyStrings.quoteList)])
     }
     return quoteListIndex;
   }
   return (
     <>
-      <h1 className='display-5 fw-bold text-body-emphasis'>{philosophyStrings.h1}</h1>
-      <div className='px-4 py-5 my-5 text-center'>
+      <h1 className='display-2'>{philosophyStrings.h1}</h1>
+      <div className='px-4 my-5 text-center'>
         <div className='col-sm-6 mx-auto'>
-          <p className='lead mb-4'>{quote}</p>
+
+          <figure>
+            <blockquote className='blockquote'>
+              <p>{quote.text}</p>
+            </blockquote>
+            <figcaption className='blockquote-footer'>
+              {quote.author}
+            </figcaption>
+          </figure>
+
           <div className='row'>
             <div className='d-grid gap-2 d-flex justify-content-center'>
               <div className='col-4'>

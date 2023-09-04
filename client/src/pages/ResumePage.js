@@ -54,6 +54,7 @@ const WorkExperience = ({ info }) => {
 export const ResumePage = () => {
   return (
     <>
+      <h1 className='display-2'>Experience</h1>
       <WorkExperience info={employers.cgi} />
       <WorkExperience info={employers.boeing} />
       {/* <WorkExperience info={provideInfo('boeing')}/> */}

@@ -6,7 +6,7 @@ export const HomePage = ({ tagStateMachine, setTagStateMachine }) => {
   return (
     <>
       <section className='my-3'>
-        <h1>Brandon Foster</h1>
+        <h1 className='display-2'>Brandon Foster</h1>
         <p className='lead'>software developer 5+ years</p>
       </section >
       <section className='text-center container' id='portfolio-destination'>
