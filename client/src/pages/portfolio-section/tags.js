@@ -3,8 +3,12 @@ export const tags = {
     name: 'Java',
     active: true,
   },
+  spring: {
+    name: 'Spring Boot',
+    active: true,
+  },
   node: {
-    name: 'Node',
+    name: 'Node.js',
     active: true,
   },
   react: {

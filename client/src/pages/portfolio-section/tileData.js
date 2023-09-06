@@ -24,9 +24,9 @@ const notesTileData = createTileData({
   imgSrc: notesSquare,
   h4: 'Notes',
   line1: 'A place for notes.',
-  line2: 'Pure PHP, plus a Markdown library. MySQL. Dockerized.',
+  line2: 'Node.js and Express. Dockerized.',
   repoUrl: 'https://bitbucket.org/brandon-foster/note_app/src/master/',
-  tags: [tags.node, tags.react],
+  tags: [tags.node],
   doDisplay: true,
 });
 const puzzleSolverTileData = createTileData({
@@ -48,7 +48,7 @@ const keyboardTileData = createTileData({
   line1: 'A place to type.',
   line2: 'Stay and relax.',
   uiUrl: 'https://bitbucket.org/brandon-foster/keyboard_ui/src/master/',
-  tags: [tags.java, tags.react],
+  tags: [tags.java, tags.spring, tags.react],
   doDisplay: true,
 });
 const urlAppTileData = createTileData({
@@ -59,7 +59,7 @@ const urlAppTileData = createTileData({
   line2: 'Shorten long URLs.',
   serviceUrl: 'https://bitbucket.org/brandon-foster/url_service/src/master/',
   uiUrl: 'https://bitbucket.org/brandon-foster/url_ui/src/master/',
-  tags: [tags.java, tags.react],
+  tags: [tags.java, tags.spring, tags.react],
   doDisplay: true,
 });
 
