@@ -96,7 +96,7 @@ const employers = {
                           <blockquote class="blockquote">
                           </blockquote>
                           <figcaption class="blockquote-footer">
-                            <cite title="CompTIA Security+ ce Certification"><a href="https://www.credly.com/badges/2686afb1-e3cb-4208-9c26-12afa3c57e9e" target="_blank" rel="noreferrer">credly.com</a></cite>
+                            verify cert at <cite title="CompTIA Security+ ce Certification"><a href="https://www.credly.com/badges/2686afb1-e3cb-4208-9c26-12afa3c57e9e" target="_blank" rel="noreferrer">credly.com</a></cite>
                           </figcaption>
                         </figure>
                         `.trim(),
@@ -112,6 +112,11 @@ const employers = {
                           </figcaption>
                         </figure>
                         `.trim(),
+                    ]),
+                    createProject('CIW Certified Internet Webmaster Associate', 'June 2010', [
+                        `<p>Web Foundations<p>
+                        <p>Internet Business</p>
+                        <p>Network Technology</p>`.trim(),
                     ]),
                 ],
             },
