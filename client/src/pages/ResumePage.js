@@ -21,7 +21,7 @@ const Project = ({ name, timeSpan, detailList }) => {
 const Role = ({ title, projects }) => {
   return (
     <>
-      <p className="text-center">{title}</p>
+      <p dangerouslySetInnerHTML={{ __html: title }} className="text-center"></p>
       {projects.map((project, i) => {
         return (
           <Project key={`project${i}`} name={project.projectName} timeSpan={project.timeSpan} detailList={project.detailList}></Project>
