@@ -59,13 +59,14 @@ const employers = {
                 titleDateRange: 'Jul 2016 - Feb 2021',
                 projects: [
                     createProject('Summary', null, [
-                        'Full stack developer writing software enhancements and providing defect resolutions for multiple applications.',
+                        'Full stack development providing enhancements and defect resolution.',
                         'Participated in planning implementation details of features and bugfixes.',
                         'Performed builds and deployments using tools including Maven, Gradle, Nexus, and Jenkins.',
                         'Wrote and tested Java code with JUnit and Mockito.',
                     ]),
                     createProject('Satellite Imagery', null, [
                         'Convert a legacy build cycle to a <span class="fw-bold">Maven Multi-Module build</span> from Ant & Ivy.',
+                        `Volunteered a dirty word search tool that was adopted the team's leadership.`,
                         'Provided defect resolutions using Java.',
                         'Automated unit tests using Mockito.',
                     ]),
